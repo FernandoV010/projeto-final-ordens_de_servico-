@@ -6,14 +6,11 @@
   "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
 
   "features": {
-    // Instala o Maven (ferramenta que baixa as bibliotecas e executa o projeto)
-    "ghcr.io/devcontainers/features/java:1": {
-      "version": "none",
-      "installMaven": "true",
-      "installGradle": "false"
-    },
+    // Instala o Maven (mvnferramenta que baixa as bibliotecas e executa o projeto)
+    "ghcr.io/devcontainers/features/java:1": {},
     // Docker dentro do Codespace (usado na UC Implantação de Sistemas)
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:4": {}
   },
 
   "customizations": {
