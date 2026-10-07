@@ -1,14 +1,10 @@
-# Nome do Sistema
-
-> Substitua o título acima pelo nome do seu sistema e preencha cada seção deste documento.
-> Este README é o **documento de visão** do projeto (entrega **AVA 1**) e, ao longo do curso,
-> também será o manual técnico de como executar o sistema.
+# viaOS
 
 | | |
 |---|---|
-| **Aluno(a)** | Seu nome completo |
-| **Turma** | |
-| **Opção escolhida** | Ordens de Serviço · Controle de Estoque · Agendamento de Serviços · Proposta própria |
+| **Aluno(a)** | Fernando Antonio Viana de Queiroz Junior|
+| **Turma** | TEC-N-001788/2026|
+| **Opção escolhida** | Ordens de Serviço |
 | **Versão atual** | 0.1.0 |
 
 ---
