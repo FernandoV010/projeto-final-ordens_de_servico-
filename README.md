@@ -34,24 +34,24 @@
 
 | ID | Requisito | Nível |
 |---|---|---|
-| RF01 | Ex.: O sistema deve permitir cadastrar, listar, editar e excluir categorias. | Essencial |
-| RF02 | | |
-| RF03 | | |
+| RF01 | | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, data/hora |
+| RF02 | | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento, Concluída, Cancelada) |
+| RF03 | | O sistema deve permitir o cancelamento de uma OS mediante a inserção obrigatória de uma justificativa |
 
 ### 2.2 Requisitos não funcionais (COMO o sistema deve ser)
 
 | ID | Requisito |
 |---|---|
-| RNF01 | O sistema deve ser acessado pelo navegador (aplicação web). |
-| RNF02 | O sistema deve exigir login e senha; as senhas devem ser armazenadas criptografadas. |
-| RNF03 | |
+| RNF01 | O sistema deve exigir login e senha |
+| RNF02 | O sistema deve restringir o acesso a dados financeiros e configurações apenas a administradores |
+| RNF03 | O sistema deve permitir a exclusão definitiva ou o anonimato de dados pessoais de clientes quando solicitado |
 
 ### 2.3 Regras de negócio (as REGRAS do negócio que o sistema precisa respeitar)
 
 | ID | Regra |
 |---|---|
-| RN01 | Ex.: Não é permitido registrar uma saída maior que o saldo do produto. |
-| RN02 | |
+| RN01 | O sistema não deve permitir a abertura de novas Ordens de Serviço para clientes que possuam valores em aberto há mais de 20 dias exibindo um alerta de bloqueio financeiro para o atendente |
+| RN02 | Sempre que uma OS for alterada para os status "Cancelada", o sistema deve exigir obrigatoriamente uma menssagem justificando o cancelamneto |
 
 ---
 
