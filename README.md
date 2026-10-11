@@ -35,10 +35,10 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 | ID | Requisito | Nível |
 |---|---|---|
-| RF01 | | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, data/hora |
-| RF02 | | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento, Concluída e Cancelada) |
-| RF03 | | O sistema deve permitir o cancelamento de uma OS mediante a inserção obrigatória de uma justificativa |
-| RF04 | | O sistema deve permitir o cadastro, edição e exclusão de clientes |
+| RF01 | | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, data/hora | ||
+| RF02 | | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento, Concluída e Cancelada) | ||
+| RF03 | | O sistema deve permitir o cancelamento de uma OS mediante a inserção obrigatória de uma justificativa | ||
+| RF04 | | O sistema deve permitir o cadastro, edição e exclusão de clientes | ||
 
 ### 2.2 Requisitos não funcionais (COMO o sistema deve ser)
 
