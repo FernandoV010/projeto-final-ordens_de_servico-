@@ -35,7 +35,7 @@
 | ID | Requisito | Nível |
 |---|---|---|
 | RF01 | | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, data/hora |
-| RF02 | | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento, Concluída, Cancelada) |
+| RF02 | | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento, Concluída e Cancelada) |
 | RF03 | | O sistema deve permitir o cancelamento de uma OS mediante a inserção obrigatória de uma justificativa |
 
 ### 2.2 Requisitos não funcionais (COMO o sistema deve ser)
@@ -44,7 +44,7 @@
 |---|---|
 | RNF01 | O sistema deve exigir login e senha |
 | RNF02 | O sistema deve restringir o acesso a dados financeiros e configurações apenas a administradores |
-| RNF03 | O sistema deve permitir a exclusão definitiva ou o anonimato de dados pessoais de clientes quando solicitado |
+| RNF03 | O sistema deve permitir a exclusão definitiva ou o anonimato de dados pessoais de clientes quando solicitado, atendendo à Lei Geral de Proteção de Dados |
 
 ### 2.3 Regras de negócio (as REGRAS do negócio que o sistema precisa respeitar)
 
