@@ -18,7 +18,7 @@
 
 | Bloco | Resposta |
 |---|---|
-| **Usuários** | Técnico de Informática |
+| **Usuários** | Técnico de Informática e Gestor|
 | **Problema** | Demora no preenchimento de dados em planilhas | 
 | **Proposta de valor** | Agilidade no atendimento, facilidade no preenchimento das informações e na busca por informações | 
 | **Funcionalidades principais** | Centralizar, organizar e automatizar informações no Banco de Dados para uma prestação de serviço ou manutenção |
