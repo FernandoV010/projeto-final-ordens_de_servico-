@@ -39,7 +39,7 @@ public class OrdemServico {
     @Column(nullable = false)
     private LocalDate dataAbertura;
 
-    public OrdemServico() {
+    public OrdemServico(String string, String string2, String string3, String string4, double d, String string5, LocalDate localDate) {
     }
 
     public OrdemServico(String equipamento, String marca, String defeitoRelatado, String diagnostico, BigDecimal valor, String status, LocalDate dataAbertura) {
