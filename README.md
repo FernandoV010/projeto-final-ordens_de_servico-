@@ -33,7 +33,7 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 ### 2.1 Requisitos funcionais (o que o sistema FAZ)
 
-| ID | Requisito | Nível |
+| ID | Requisito | 
 |---|---|---|
 | RF01 | | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, data/hora |
 | RF02 | | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento, Concluída e Cancelada) |
