@@ -59,14 +59,23 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 ## 3. Histórias de usuário
 
-Formato: **Como** *[papel]*, **quero** *[ação]*, **para** *[benefício]*.
+**HU01 —** Como técnico de informática, quero visualizar uma lista de ordens de serviço ordenadas por prioridade e status, para que eu saiba exatamente qual aparelho devo consertar primeiro.
 
-**HU01 —** Como ..., quero ..., para ...
-- Critério de aceite: ...
-- Critério de aceite: ...
+Critério de aceite: O sistema deve exibir uma tela de painel (dashboard) com as OS categorizadas em "Aberta", "Em Andamento", "Concluída" e "Cancelada".
 
-**HU02 —** Como ..., quero ..., para ...
-- Critério de aceite: ...
+Critério de aceite: O técnico deve conseguir filtrar as ordens de serviço pelo seu próprio nome.
+
+**HU02 —** Como técnico de informática, quero atualizar o status da ordem de serviço, para que os outros técnicos saibam que o equipamento está pronto e possa entrar em contato com o cliente.
+
+Critério de aceite: O sistema deve disponibilizar um campo de texto obrigatório para a descrição detalhada do defeito constatado e da solução proposta.
+
+Critério de aceite: Ao salvar, a OS deve registrar a data, o horário e o nome do técnico que realizou a atualização.
+
+**HU03 —** Como gestor da assistência, quero visualizar o custo total das peças adquiridas para o conserto do equipamento, o valor da mão de obra do serviço, para que eu possa aprovar os orçamentos financeiramente viáveis antes de enviar ao cliente.
+
+Critério de aceite: O sistema deve exibir em uma aba financeira da OS o detalhamento do preço de custo de cada peça utilizada versus o preço de venda cobrado do cliente.
+
+Critério de aceite: O sistema deve calcular e exibir em destaque o lucro líquido daquela ordem de serviço.
 
 ---
 
