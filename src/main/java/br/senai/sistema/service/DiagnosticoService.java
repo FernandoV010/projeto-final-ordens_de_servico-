@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Objects;
+
 
 import javax.sql.DataSource;
 
@@ -72,6 +74,8 @@ public class DiagnosticoService {
     }
 
     public boolean tudoOk(Map<String, Item> itens) {
-        return itens.values().stream().allMatch(Item::ok);
+        return itens.values().stream()
+            .filter(Objects::nonNull)
+            .allMatch(Item::ok);
     }
 }

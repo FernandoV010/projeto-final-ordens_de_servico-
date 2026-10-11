@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Aluno(a)** | Fernando Antonio Viana de Queiroz Junior|
-| **Turma** | TEC-N-001788/2026|
+| **Aluno(a)** | Fernando Antonio Viana de Queiroz Junior |
+| **Turma** | TEC-N-001788/2026 |
 | **Opção escolhida** | Ordens de Serviço |
 | **Versão atual** | 0.1.0 |
 
@@ -18,9 +18,9 @@
 
 | Bloco | Resposta |
 |---|---|
-| **Usuários** Técnico de Informática | |
-| **Problema** Demora no preenchimento de dados em planilhas | |
-| **Proposta de valor** Agilidade no atendimento, facilidade no preenchimento  das informações e na busca  por informações | |
+| **Usuários** | Técnico de Informática |
+| **Problema** | Demora no preenchimento de dados em planilhas | 
+| **Proposta de valor** | Agilidade no atendimento, facilidade no preenchimento das informações e na busca por informações | 
 | **Funcionalidades principais** | |
 | **Informações que o sistema guarda** | |
 | **Indicadores** (o que o gestor quer acompanhar) | |
