@@ -21,9 +21,9 @@
 | **Usuários** | Técnico de Informática |
 | **Problema** | Demora no preenchimento de dados em planilhas | 
 | **Proposta de valor** | Agilidade no atendimento, facilidade no preenchimento das informações e na busca por informações | 
-| **Funcionalidades principais** | |
-| **Informações que o sistema guarda** | |
-| **Indicadores** (o que o gestor quer acompanhar) | |
+| **Funcionalidades principais** | Centralizar, organizar e automatizar informações no Banco de Dados para uma prestação de serviço ou manutenção |
+| **Informações que o sistema guarda** | Dados do cliente, informações dos equipamentos, registros da execução e fechamento financeiro |
+| **Indicadores** | Todas as informações sobre manutenções realizadas, quem realizou, para quem e valores finais |
 | **Restrições** (prazo, tecnologia, equipe) | Projeto individual · Java 21 · Spring Boot 4 · entrega v1.0 em 11/11 |
 
 ---
