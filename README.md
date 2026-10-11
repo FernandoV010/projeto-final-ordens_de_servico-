@@ -18,9 +18,9 @@
 
 | Bloco | Resposta |
 |---|---|
-| **Usuários** (quem usa o sistema) | |
-| **Problema** (dor atual) | |
-| **Proposta de valor** (o que melhora com o sistema) | |
+| **Usuários** Técnico de Informática | |
+| **Problema** Demora no preenchimento de dados em planilhas | |
+| **Proposta de valor** Agilidade no atendimento, facilidade no preenchimento  das informações e na busca  por informações | |
 | **Funcionalidades principais** | |
 | **Informações que o sistema guarda** | |
 | **Indicadores** (o que o gestor quer acompanhar) | |
