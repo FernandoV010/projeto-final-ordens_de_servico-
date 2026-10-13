@@ -7,11 +7,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import br.senai.sistema.model.Cliente;
-import br.senai.sistema.model.OrdemServico;
 import br.senai.sistema.model.Perfil;
 import br.senai.sistema.model.Usuario;
 import br.senai.sistema.repository.ClienteRepository;
-import br.senai.sistema.repository.OrdemServicoRepository;
 import br.senai.sistema.repository.UsuarioRepository;
 
 /**
@@ -24,14 +22,13 @@ public class DadosIniciais implements CommandLineRunner {
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
     private final ClienteRepository clienteRepository;
-    private final OrdemServicoRepository ordemServicoRepository;
 
     public DadosIniciais(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder,
-                         ClienteRepository clienteRepository, OrdemServicoRepository ordemServicoRepository) {
+                         ClienteRepository clienteRepository) {
         this.usuarioRepository = usuarioRepository;
         this.passwordEncoder = passwordEncoder;
         this.clienteRepository = clienteRepository;
-        this.ordemServicoRepository = ordemServicoRepository;
+        
     }
 
     @Override
@@ -52,15 +49,6 @@ public class DadosIniciais implements CommandLineRunner {
             clienteRepository.save(cliente3);
         }
         
-            if (ordemServicoRepository.count() == 0) {
-            // OS 1 e OS 2 corrigidas sem os nomes dos parâmetros
-            OrdemServico os1 = new OrdemServico("Notebook", "Dell", "Não liga", "cooler obstruído", 450.00, "Em Andamento", LocalDate.of(2026, 10, 11));
-            OrdemServico os2 = new OrdemServico("Notebook", "Dell", "Não liga", "cooler obstruído", 450.00, "Em Andamento", LocalDate.of(2026, 10, 11));
-            OrdemServico os3 = new OrdemServico("Desktop", "Pichau", "Não dá imagem", "Problema na placa de video", 380.00, "Em Andamento", LocalDate.of(2026, 10, 11));
-            ordemServicoRepository.save(os1);
-            ordemServicoRepository.save(os2);
-            ordemServicoRepository.save(os3);
-        }
 
     }
 }
