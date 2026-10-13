@@ -56,7 +56,7 @@ public class DadosIniciais implements CommandLineRunner {
             // OS 1 e OS 2 corrigidas sem os nomes dos parâmetros
             OrdemServico os1 = new OrdemServico("Notebook", "Dell", "Não liga", "cooler obstruído", 450.00, "Em Andamento", LocalDate.of(2026, 10, 11));
             OrdemServico os2 = new OrdemServico("Notebook", "Dell", "Não liga", "cooler obstruído", 450.00, "Em Andamento", LocalDate.of(2026, 10, 11));
-            OrdemServico os3 = new OrdemServico("Smartphone", "Samsung", "Tela quebrada", "Troca de frontal", 380.00, "Em Andamento", LocalDate.of(2026, 10, 11));
+            OrdemServico os3 = new OrdemServico("Desktop", "Pichau", "Não dá imagem", "Problema na placa de video", 380.00, "Em Andamento", LocalDate.of(2026, 10, 11));
             ordemServicoRepository.save(os1);
             ordemServicoRepository.save(os2);
             ordemServicoRepository.save(os3);
