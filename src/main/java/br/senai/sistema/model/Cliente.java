@@ -36,12 +36,6 @@ public class Cliente {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    /** Cpf da pessoa ou empresa. */
-    @NotBlank(message = "Campo obrigatório.")
-    @Size(max = 30, message = "Use no máximo 30 caracteres.")
-    @Column(nullable = false, length = 30)
-    private String cpf;
-
     /** Telefone para contato. */
     @NotBlank(message = "Campo obrigatório.")
     @Size(max = 20, message = "Use no máximo 20 caracteres.")
@@ -53,11 +47,6 @@ public class Cliente {
     @Email(message = "Informe um e-mail válido.")
     @Column(length = 100)
     private String email;
-
-    /** Endereço do cliente. */
-    @Size(max = 100, message = "Use no máximo 100 caracteres.")
-    @Column(length = 100)
-    private String endereco;
 
     /** Cidade do cliente. */
     @Size(max = 60, message = "Use no máximo 60 caracteres.")
@@ -76,17 +65,17 @@ public class Cliente {
     }
 
     /** Construtor com os dados principais: facilita criar objetos no código. */
-    public Cliente(String nome, String cpf, String telefone, String email, String endereco, String cidade, LocalDate dataCadastro) {
+    public Cliente(String nome, String telefone, String email, String cidade, LocalDate dataCadastro) {
         this.nome = nome;
-        this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
-        this.endereco = endereco;
         this.cidade = cidade;
         this.dataCadastro = dataCadastro;
     }
 
-public Long getId() {
+    // ---- Getters e setters ----
+
+    public Long getId() {
         return id;
     }
 
@@ -100,14 +89,6 @@ public Long getId() {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public String getTelefone() {
@@ -126,14 +107,6 @@ public Long getId() {
         this.email = email;
     }
 
-     public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
     public String getCidade() {
         return cidade;
     }
@@ -150,4 +123,3 @@ public Long getId() {
         this.dataCadastro = dataCadastro;
     }
 }
-    

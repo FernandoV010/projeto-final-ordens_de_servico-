@@ -41,9 +41,9 @@ public class DadosIniciais implements CommandLineRunner {
         }
 
         if (clienteRepository.count() == 0) {
-            Cliente cliente1 = new Cliente("Marina Costa", "123.456.789-12", "(43) 99999-1001", "marina@email.com", "Rua Dom João VI, 56", "Londrina", LocalDate.of(2026, 8, 12));
-            Cliente cliente2 = new Cliente("Oficina Silva Ltda.", "456.789.123-45", "(43) 3333-2002", "contato@oficinasilva.com", "Rua Vasco da Gama, 128", "Cambé", LocalDate.of(2026, 9, 3));
-            Cliente cliente3 = new Cliente("Pedro Henrique Alves", "789.123.456-78", "(43) 98888-3003", "pedro@email.com", "Avenida JK, 1387", "Ibiporã", LocalDate.of(2026, 10, 1));
+            Cliente cliente1 = new Cliente("Marina Costa", "(43) 99999-1001", "marina@email.com", "Londrina", LocalDate.of(2026, 8, 12));
+            Cliente cliente2 = new Cliente("Oficina Silva Ltda.", "(43) 3333-2002", "contato@oficinasilva.com", "Cambé", LocalDate.of(2026, 9, 3));
+            Cliente cliente3 = new Cliente("Pedro Henrique Alves", "(43) 98888-3003", "pedro@email.com", "Ibiporã", LocalDate.of(2026, 10, 1));
             clienteRepository.save(cliente1);
             clienteRepository.save(cliente2);
             clienteRepository.save(cliente3);
