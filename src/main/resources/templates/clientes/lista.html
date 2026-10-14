@@ -31,6 +31,7 @@
                     <th>E-mail</th>
                     <th>Cidade</th>
                     <th>Cliente desde</th>
+                    <th class="text-end">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -41,6 +42,9 @@
                     <td th:text="${cliente.email}">E-mail</td>
                     <td th:text="${cliente.cidade}">Cidade</td>
                     <td th:text="${#temporals.format(cliente.dataCadastro, 'dd/MM/yyyy')}">01/01/2026</td>
+                    <td class="text-end text-nowrap">
+                        <a th:href="@{/clientes/{id}/editar(id=${cliente.id})}" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i> Editar</a>
+                    </td>
                 </tr>
                 </tbody>
             </table>

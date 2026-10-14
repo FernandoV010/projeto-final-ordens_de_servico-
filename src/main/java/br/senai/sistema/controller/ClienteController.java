@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -53,5 +54,12 @@ public class ClienteController {
         clienteService.salvar(cliente);
         atributos.addFlashAttribute("mensagem", "Cliente salvo com sucesso.");
         return "redirect:/clientes";
+    }
+
+    /** GET /clientes/5/editar -> abre o formulário preenchido com o registro de id 5. */
+    @GetMapping("/{id}/editar")
+    public String editar(@PathVariable Long id, Model model) {
+        model.addAttribute("cliente", clienteService.buscarPorId(id));
+        return "clientes/form";
     }
 }
