@@ -87,17 +87,14 @@ classDiagram
     class Cliente {
         Long id
         String nome
-        String cpf
         String telefone
         String email
-        String endereco
         String cidade
         LocalDate dataCadastro
     }
     class Tecnico {
         Long id
         String nome
-        String cpf
         String telefone
     }
     class OrdemServico {
