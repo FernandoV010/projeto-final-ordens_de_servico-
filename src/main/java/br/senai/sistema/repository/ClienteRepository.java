@@ -13,3 +13,4 @@ import br.senai.sistema.model.Cliente;
  */
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 }
+
