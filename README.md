@@ -95,6 +95,7 @@ classDiagram
     class Tecnico {
         Long id
         String nome
+        String especialidade
         String telefone
     }
     class OrdemServico {

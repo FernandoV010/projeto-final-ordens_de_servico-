@@ -6,11 +6,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import br.senai.sistema.model.Tecnico;
 import br.senai.sistema.model.Cliente;
 import br.senai.sistema.model.Perfil;
 import br.senai.sistema.model.Usuario;
-import br.senai.sistema.repository.TecnicoRepository;
 import br.senai.sistema.repository.ClienteRepository;
 import br.senai.sistema.repository.UsuarioRepository;
 
@@ -24,14 +22,12 @@ public class DadosIniciais implements CommandLineRunner {
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
     private final ClienteRepository clienteRepository;
-    private final TecnicoRepository tecnicoRepository;
 
     public DadosIniciais(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder,
-                         ClienteRepository clienteRepository, TecnicoRepository tecnicoRepository) {
+                         ClienteRepository clienteRepository) {
         this.usuarioRepository = usuarioRepository;
         this.passwordEncoder = passwordEncoder;
         this.clienteRepository = clienteRepository;
-        this.tecnicoRepository = tecnicoRepository;
     }
 
     @Override
@@ -52,13 +48,5 @@ public class DadosIniciais implements CommandLineRunner {
             clienteRepository.save(cliente3);
         }
 
-        if (tecnicoRepository.count() == 0) {
-            Tecnico tecnico1 = new Tecnico("Carlos Mendes", "Notebooks", "(43) 99111-2233");
-            Tecnico tecnico2 = new Tecnico("Juliana Prado", "Impressoras", "(43) 99222-3344");
-            Tecnico tecnico3 = new Tecnico("Rafael Souza", "Celulares", "(43) 99333-4455");
-            tecnicoRepository.save(tecnico1);
-            tecnicoRepository.save(tecnico2);
-            tecnicoRepository.save(tecnico3);
-        }
     }
 }
