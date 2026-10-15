@@ -1,25 +1,18 @@
 package br.senai.sistema.model;
 
-import java.time.LocalDate;
-
-import org.springframework.format.annotation.DateTimeFormat;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
 
 /**
- * Entidade Cliente: representa o cliente que o sistema guarda.
+ * Entidade Tecnico: representa o técnico que o sistema guarda.
  *
- * Cada objeto desta classe vira UMA LINHA da tabela "clientes" no banco.
+ * Cada objeto desta classe vira UMA LINHA da tabela "tecnicos" no banco.
  * As anotações de validação (@NotBlank, @Size...) definem as regras dos campos do formulário.
  */
 @Entity
@@ -30,22 +23,21 @@ public class Tecnico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    /** Nome do Técnico. */
+    /** Nome do técnico. */
     @NotBlank(message = "Campo obrigatório.")
     @Size(max = 100, message = "Use no máximo 100 caracteres.")
     @Column(nullable = false, length = 100)
     private String nome;
 
-    /** Especialidade. */
+    /** Tipo de equipamento que atende. */
     @NotBlank(message = "Campo obrigatório.")
     @Size(max = 60, message = "Use no máximo 60 caracteres.")
     @Column(nullable = false, length = 60)
     private String especialidade;
 
-    /** Telefone para contato. */
-    @Size(message = "Não é obrigatório.")
+    /** Telefone para contato (opcional). */
     @Size(max = 20, message = "Use no máximo 20 caracteres.")
-    @Column(nullable = false, length = 20)
+    @Column(length = 20)
     private String telefone;
 
     /** Construtor vazio: obrigatório para o JPA e para o formulário criarem objetos. */
@@ -55,7 +47,7 @@ public class Tecnico {
     /** Construtor com os dados principais: facilita criar objetos no código. */
     public Tecnico(String nome, String especialidade, String telefone) {
         this.nome = nome;
-        this.telefone = especialidade;
+        this.especialidade = especialidade;
         this.telefone = telefone;
     }
 
@@ -77,35 +69,19 @@ public class Tecnico {
         this.nome = nome;
     }
 
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
+    }
+
     public String getTelefone() {
         return telefone;
     }
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
-
-    public LocalDate getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDate dataCadastro) {
-        this.dataCadastro = dataCadastro;
     }
 }
