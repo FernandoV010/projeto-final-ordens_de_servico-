@@ -51,3 +51,6 @@ spring:
   # Sem cache: alterações nas páginas aparecem ao recarregar o navegador.
   thymeleaf:
     cache: false
+
+    
+

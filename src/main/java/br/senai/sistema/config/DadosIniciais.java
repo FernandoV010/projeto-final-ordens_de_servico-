@@ -6,6 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+
 import br.senai.sistema.model.Cliente;
 import br.senai.sistema.model.Perfil;
 import br.senai.sistema.model.Usuario;
@@ -22,12 +23,14 @@ public class DadosIniciais implements CommandLineRunner {
     private final UsuarioRepository usuarioRepository;
     private final PasswordEncoder passwordEncoder;
     private final ClienteRepository clienteRepository;
+    
 
     public DadosIniciais(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder,
                          ClienteRepository clienteRepository) {
         this.usuarioRepository = usuarioRepository;
         this.passwordEncoder = passwordEncoder;
         this.clienteRepository = clienteRepository;
+        
     }
 
     @Override
@@ -48,5 +51,6 @@ public class DadosIniciais implements CommandLineRunner {
             clienteRepository.save(cliente3);
         }
 
+        
     }
 }
