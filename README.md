@@ -36,7 +36,7 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 | ID | Requisito | 
 |---|---|
 | RF01 | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, data/hora | 
-| RF02 | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento, Concluída e Cancelada) | 
+| RF02 | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento e Concluída) | 
 | RF03 | O sistema deve permitir o cancelamento de uma OS mediante a inserção obrigatória de uma justificativa | 
 | RF04 | O sistema deve permitir o cadastro, edição e exclusão de clientes | 
 
@@ -61,7 +61,7 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 **HU01 —** Como técnico de informática, quero visualizar uma lista de ordens de serviço ordenadas por prioridade e status, para que eu saiba exatamente qual aparelho devo consertar primeiro.
 
-Critério de aceite: O sistema deve exibir uma tela de painel (dashboard) com as OS categorizadas em "Aberta", "Em Andamento", "Concluída" e "Cancelada".
+Critério de aceite: O sistema deve exibir uma tela de painel (dashboard) com as OS categorizadas em "Aberta", "Em Andamento" e "Concluída".
 
 Critério de aceite: O técnico deve conseguir filtrar as ordens de serviço pelo seu próprio nome.
 
