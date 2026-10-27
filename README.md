@@ -52,8 +52,8 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 | ID | Regra |
 |---|---|
-| RN01 | O sistema não deve permitir a abertura de novas Ordens de Serviço para clientes que possuam valores em aberto há mais de 20 dias exibindo um alerta de bloqueio financeiro para o atendente |
-| RN02 | Sempre que uma OS for alterada para os status "Cancelada", o sistema deve exigir obrigatoriamente uma menssagem justificando o cancelamneto |
+| RN01 | Para concluir uma ordem de serviço o técnico deverá informar o diagnóstico e o valor total do serviço |
+| RN02 | O técnico não poderá alterar nem excluir uma ordem de serviço concluída. |
 
 ---
 
