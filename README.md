@@ -53,7 +53,7 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 | ID | Regra |
 |---|---|
 | RN01 | Para concluir uma ordem de serviço o técnico deverá informar o diagnóstico e o valor total do serviço |
-| RN02 | O técnico não poderá alterar nem excluir uma ordem de serviço concluída. |
+| RN02 | O técnico não poderá alterar nem excluir uma ordem de serviço concluída |
 
 ---
 
