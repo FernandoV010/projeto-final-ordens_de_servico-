@@ -134,6 +134,7 @@ Abra o projeto na IDE e execute a classe `SistemaApplication`. Acesse `http://lo
 |---|---|---|
 | admin | admin123 | Administrador |
 | operador | operador123 | Operador |
+| viana | viana020891 | operador |
 
 *(o login passa a ser exigido a partir do Encontro 7)*
 
