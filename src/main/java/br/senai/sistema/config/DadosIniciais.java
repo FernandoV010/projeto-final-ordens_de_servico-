@@ -52,8 +52,8 @@ public class DadosIniciais implements CommandLineRunner {
                     passwordEncoder.encode("operador123"), Perfil.OPERADOR));
         }
 
-        if (usuarioRepository.findByLogin("Viana").isEmpty()) {
-            usuarioRepository.save(new Usuario("Viana", "Viana",
+        if (usuarioRepository.findByLogin("viana").isEmpty()) {
+            usuarioRepository.save(new Usuario("Viana", "viana",
                     passwordEncoder.encode("viana020891"), Perfil.OPERADOR));
         }
 
