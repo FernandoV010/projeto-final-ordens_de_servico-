@@ -61,4 +61,22 @@ public class PainelService {
     public List<OrdemServico> atencao() {
         return ordemServicoRepository.findByStatusNotOrderByDataAberturaAsc(StatusOrdem.CONCLUIDA);
     }
+
+    /** Gráfico: nomes das barras (uma por situação). */
+    public List<String> graficoRotulos() {
+        List<String> rotulos = new ArrayList<>();
+        for (StatusOrdem status : StatusOrdem.values()) {
+            rotulos.add(status.getDescricao());
+        }
+        return rotulos;
+    }
+
+    /** Gráfico: altura de cada barra (quantas ordens em cada situação). */
+    public List<Long> graficoValores() {
+        List<Long> valores = new ArrayList<>();
+        for (StatusOrdem status : StatusOrdem.values()) {
+            valores.add(ordemServicoRepository.countByStatus(status));
+        }
+        return valores;
+    }
 }
