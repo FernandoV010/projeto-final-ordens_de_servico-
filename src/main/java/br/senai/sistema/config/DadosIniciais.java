@@ -52,6 +52,11 @@ public class DadosIniciais implements CommandLineRunner {
                     passwordEncoder.encode("operador123"), Perfil.OPERADOR));
         }
 
+        if (usuarioRepository.findByLogin("Viana").isEmpty()) {
+            usuarioRepository.save(new Usuario("Viana", "Viana",
+                    passwordEncoder.encode("viana020891"), Perfil.OPERADOR));
+        }
+
         if (clienteRepository.count() == 0) {
             Cliente cliente1 = new Cliente("Marina Costa", "(43) 99999-1001", "marina@email.com", "Londrina", LocalDate.of(2026, 8, 12));
             Cliente cliente2 = new Cliente("Oficina Silva Ltda.", "(43) 3333-2002", "contato@oficinasilva.com", "Cambé", LocalDate.of(2026, 9, 3));
