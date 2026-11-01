@@ -7,14 +7,16 @@
 
 app:
   # Nome do seu sistema: aparece no menu e no título das páginas.
-  # TROQUE para o nome do seu projeto (ex.: "Estoque Fácil", "OS Técnica").
   nome: "viaOS"
+  # Nome da empresa: aparece no rodapé de todas as páginas.
+  empresa: "Viana`s Informática"
   seguranca:
       # Segurança (login): ligada a partir do Encontro 7.
         ativa: true
 
 server:
   port: 8080
+  forward-headers-strategy: framework
 
 spring:
   application:
@@ -51,6 +53,7 @@ spring:
   # Sem cache: alterações nas páginas aparecem ao recarregar o navegador.
   thymeleaf:
     cache: false
+  
 
     
 
