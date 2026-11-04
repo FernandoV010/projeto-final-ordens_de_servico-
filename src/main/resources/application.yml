@@ -7,7 +7,7 @@
 
 app:
   # Nome do seu sistema: aparece no menu e no título das páginas.
-  nome: "viaOS"
+  nome:
   # Nome da empresa: aparece no rodapé de todas as páginas.
   empresa: "Viana`s Informática"
   seguranca:
