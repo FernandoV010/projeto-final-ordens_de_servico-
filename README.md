@@ -157,3 +157,4 @@ Java 21 · Spring Boot 4 · Spring MVC · Thymeleaf · Bootstrap 5 · Spring Dat
 |---|---|---|---|
 | admin | admin123 | Administrador | Tudo |
 | operador | operador123 | Operador | Consulta clientes e técnicos, abre ordens de serviço e muda a situação delas |
+| viana | viana020891 | Operador | Consulta clientes e técnicos, abre ordens de serviço e muda a situação delas |

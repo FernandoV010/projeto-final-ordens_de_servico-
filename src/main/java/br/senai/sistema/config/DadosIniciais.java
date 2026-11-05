@@ -69,7 +69,7 @@ public class DadosIniciais implements CommandLineRunner {
         if (tecnicoRepository.count() == 0) {
             Tecnico tecnico1 = new Tecnico("Carlos Mendes", "Notebooks", "(43) 99111-2233");
             Tecnico tecnico2 = new Tecnico("Juliana Prado", "Impressoras", "(43) 99222-3344");
-            Tecnico tecnico3 = new Tecnico("Rafael Souza", "Celulares", "(43) 99333-4455");
+            Tecnico tecnico3 = new Tecnico("Rafael Souza", "Desktops", "(43) 99333-4455");
             tecnicoRepository.save(tecnico1);
             tecnicoRepository.save(tecnico2);
             tecnicoRepository.save(tecnico3);
@@ -87,7 +87,7 @@ public class DadosIniciais implements CommandLineRunner {
                         clientes.get(1 % clientes.size()), tecnicos.get(1 % tecnicos.size()));
                 ordemServico2.setDiagnostico("Rolete de tração gasto");
                 ordemServico2.setValor(new BigDecimal("180.00"));
-                OrdemServico ordemServico3 = new OrdemServico("Celular Samsung Galaxy A54", "Tela trincada", LocalDate.of(2026, 10, 16), StatusOrdem.CONCLUIDA,
+                OrdemServico ordemServico3 = new OrdemServico("Desktop Pichau", "Não dá imagem", LocalDate.of(2026, 10, 16), StatusOrdem.CONCLUIDA,
                         clientes.get(2 % clientes.size()), tecnicos.get(2 % tecnicos.size()));
                 ordemServico3.setDiagnostico("Troca do display");
                 ordemServico3.setValor(new BigDecimal("450.00"));
