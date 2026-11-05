@@ -60,6 +60,11 @@ public class Cliente {
     @Column(nullable = false)
     private LocalDate dataCadastro;
 
+    /** Bairro do cliente. */
+    @Size(max = 60, message = "Use no máximo 60 caracteres.")
+    @Column(length = 60)
+    private String bairro;
+
     /** Construtor vazio: obrigatório para o JPA e para o formulário criarem objetos. */
     public Cliente() {
     }
@@ -121,5 +126,13 @@ public class Cliente {
 
     public void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 }

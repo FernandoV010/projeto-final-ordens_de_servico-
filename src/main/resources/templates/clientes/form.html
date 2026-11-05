@@ -39,6 +39,11 @@
                         <input type="date" class="form-control" th:field="*{dataCadastro}" th:errorclass="is-invalid">
                         <div class="invalid-feedback" th:if="${#fields.hasErrors('dataCadastro')}" th:errors="*{dataCadastro}">Erro</div>
                     </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="bairro">Bairro</label>
+                        <input type="text" class="form-control" th:field="*{bairro}" th:errorclass="is-invalid">
+                        <div class="invalid-feedback" th:if="${#fields.hasErrors('bairro')}" th:errors="*{bairro}">Erro</div>
+                    </div>
                 </div>
                 <p class="text-muted small mt-3 mb-0">* Campos obrigatórios</p>
                 <div class="mt-3 d-flex gap-2">
