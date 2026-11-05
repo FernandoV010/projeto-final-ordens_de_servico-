@@ -1,5 +1,7 @@
 package br.senai.sistema.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import br.senai.sistema.model.Tecnico;
@@ -12,4 +14,8 @@ import br.senai.sistema.model.Tecnico;
  * JpaRepository<Tecnico, Long>  ->  entidade Tecnico, chave primária do tipo Long.
  */
 public interface TecnicoRepository extends JpaRepository<Tecnico, Long> {
+
+    // Consulta derivada do nome do método: o Spring Data monta o SQL sozinho.
+    // "Containing" = contém o texto; "IgnoreCase" = sem diferenciar maiúsculas; "OrderByNome" = ordenado.
+    List<Tecnico> findByNomeContainingIgnoreCaseOrderByNome(String nome);
 }

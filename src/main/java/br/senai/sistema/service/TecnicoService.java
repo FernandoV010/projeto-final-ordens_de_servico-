@@ -26,6 +26,14 @@ public class TecnicoService {
         return tecnicoRepository.findAll(Sort.by("nome"));
     }
 
+    /** Busca pelo nome (ou parte dele). Sem texto, devolve todos. */
+    public List<Tecnico> buscarPorNome(String nome) {
+        if (nome == null || nome.isBlank()) {
+            return listarTodos();
+        }
+        return tecnicoRepository.findByNomeContainingIgnoreCaseOrderByNome(nome.trim());
+    }
+
     /** Busca um registro pelo id. Se não existir, gera um erro com mensagem clara. */
     public Tecnico buscarPorId(Long id) {
         return tecnicoRepository.findById(id)

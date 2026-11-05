@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.senai.sistema.model.Tecnico;
@@ -27,10 +28,11 @@ public class TecnicoController {
         this.tecnicoService = tecnicoService;
     }
 
-    /** GET /tecnicos -> mostra a lista. */
+    /** GET /tecnicos -> mostra a lista. Com ?nome=texto, mostra só os que contêm o texto. */
     @GetMapping
-    public String listar(Model model) {
-        model.addAttribute("tecnicos", tecnicoService.listarTodos());
+    public String listar(@RequestParam(required = false) String nome, Model model) {
+        model.addAttribute("tecnicos", tecnicoService.buscarPorNome(nome));
+        model.addAttribute("nome", nome);
         return "tecnicos/lista";
     }
 
