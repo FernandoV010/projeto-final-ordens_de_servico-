@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<!--
+    COMPROVANTE para impressão.
+    O botão Imprimir chama window.print(), a janela de impressão do navegador (que também salva em PDF).
+    Na impressão, o menu e o rodapé ficam escondidos (regra @media print no app.css)
+    e os botões também (classe d-print-none do Bootstrap).
+-->
+<head th:replace="~{fragments/layout :: head('Comprovante')}"></head>
+<body>
+<nav th:replace="~{fragments/layout :: menu}"></nav>
+
+<main class="container py-4" style="max-width: 760px;">
+    <div class="d-flex justify-content-between mb-3 d-print-none">
+        <a th:href="@{/ordens}" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> Voltar</a>
+        <button type="button" class="btn btn-app" onclick="window.print()"><i class="bi bi-printer"></i> Imprimir</button>
+    </div>
+
+    <div class="card">
+        <div class="card-body p-4">
+            <!-- Cabeçalho: empresa, sistema, número e data de emissão -->
+            <div class="d-flex justify-content-between border-bottom pb-3 mb-3">
+                <div>
+                    <div class="h5 mb-0" th:text="${appEmpresa}">Nome da empresa</div>
+                    <div class="small text-muted" th:text="${appNome}">Meu Sistema</div>
+                </div>
+                <div class="text-end">
+                    <div class="fw-semibold">Ordem de serviço nº <span th:text="${ordemServico.id}">1</span></div>
+                    <div class="small text-muted">Emitido em <span th:text="${#temporals.format(emitidoEm, 'dd/MM/yyyy HH:mm')}">01/01/2026 08:00</span></div>
+                </div>
+            </div>
+
+            <!-- Dados do registro: dt = rótulo, dd = valor -->
+            <dl class="row mb-0">
+                <dt class="col-sm-4">Abertura</dt>
+                <dd class="col-sm-8" th:text="${#temporals.format(ordemServico.dataAbertura, 'dd/MM/yyyy')}">-</dd>
+                <dt class="col-sm-4">Situação</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.status.descricao}">-</dd>
+                <dt class="col-sm-4">Cliente</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.cliente.nome}">-</dd>
+                <dt class="col-sm-4">Telefone</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.cliente.telefone} ?: '-'">-</dd>
+                <dt class="col-sm-4">Técnico</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.tecnico.nome}">-</dd>
+                <dt class="col-sm-4">Equipamento</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.equipamento}">-</dd>
+                <dt class="col-sm-4">Defeito relatado</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.defeitoRelatado}">-</dd>
+                <dt class="col-sm-4">Diagnóstico</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.diagnostico} ?: '-'">-</dd>
+                <dt class="col-sm-4">Valor</dt>
+                <dd class="col-sm-8" th:text="${ordemServico.valor != null} ? ${'R$ ' + #numbers.formatDecimal(ordemServico.valor, 1, 'POINT', 2, 'COMMA')} : '-'">-</dd>
+            </dl>
+
+            <!-- Linhas para assinatura -->
+            <div class="row g-5 mt-2 text-center">
+                <div class="col">
+                    <div class="border-top border-dark pt-1 small" style="margin-top: 3rem;">Assinatura do cliente</div>
+                </div>
+                <div class="col">
+                    <div class="border-top border-dark pt-1 small" style="margin-top: 3rem;">Assinatura do técnico</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{fragments/layout :: rodape}"></footer>
+</body>
+</html>

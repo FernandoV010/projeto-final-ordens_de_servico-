@@ -55,6 +55,7 @@
                     <td><span class="badge" th:classappend="'text-bg-' + ${ordemServico.status.cor}" th:text="${ordemServico.status.descricao}">Situação</span></td>
                     <td class="text-end text-nowrap">
                         <a th:href="@{/ordens/{id}/editar(id=${ordemServico.id})}" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i> Editar</a>
+                        <a th:href="@{/ordens/{id}/comprovante(id=${ordemServico.id})}" class="btn btn-sm btn-outline-dark"><i class="bi bi-printer"></i> Comprovante</a>
                         <!-- Mudar a situação: formulário POST que envia a nova situação -->
                         <form th:if="${ordemServico.status.name() == 'ABERTA'}" th:action="@{/ordens/{id}/status(status='EM_ANDAMENTO', id=${ordemServico.id})}" method="post" class="d-inline">
                             <button type="submit" class="btn btn-sm btn-outline-primary"><i class="bi bi-play-fill"></i> Iniciar</button>

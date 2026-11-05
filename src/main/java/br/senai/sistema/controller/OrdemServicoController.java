@@ -1,5 +1,8 @@
 package br.senai.sistema.controller;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -108,6 +111,14 @@ public class OrdemServicoController {
             atributos.addFlashAttribute("erro", e.getMessage());
         }
         return "redirect:/ordens";
+    }
+
+    /** GET /ordens/5/comprovante -> comprovante do registro de id 5, pronto para imprimir. */
+    @GetMapping("/{id}/comprovante")
+    public String comprovante(@PathVariable Long id, Model model) {
+        model.addAttribute("ordemServico", ordemServicoService.buscarPorId(id));
+        model.addAttribute("emitidoEm", LocalDateTime.now(ZoneId.of("America/Sao_Paulo")));
+        return "ordens/comprovante";
     }
 
     /** Coloca no model as listas usadas nas listas de escolha (select) do formulário. */
