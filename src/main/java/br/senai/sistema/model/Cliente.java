@@ -38,7 +38,7 @@ public class Cliente {
 
     /** Telefone para contato. */
     @NotBlank(message = "Campo obrigatório.")
-    @Size(max = 20, message = "Use no máximo 20 caracteres.")
+    @Size(min =11, max = 20, message = "O telefone deve ter entre 11 e 20 caracteres.")
     @Column(nullable = false, length = 20)
     private String telefone;
 
