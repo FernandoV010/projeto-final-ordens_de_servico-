@@ -21,6 +21,13 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label" for="especialidade">Especialidade *</label>
+                        <!-- Opções fixas: o usuário escolhe em vez de digitar (o value é o que fica gravado) -->
+                        <select class="form-select" th:field="*{especialidade}" th:errorclass="is-invalid">
+                            <option value="">Selecione...</option>
+                            <option value="Notebooks">Notebooks</option>
+                            <option value="Computadores">Desktops</option>
+                            <option value="Impressoras">Impressoras</option>
+                        </select>
                         <input type="text" class="form-control" th:field="*{especialidade}" th:errorclass="is-invalid">
                         <div class="invalid-feedback" th:if="${#fields.hasErrors('especialidade')}" th:errors="*{especialidade}">Erro</div>
                     </div>
