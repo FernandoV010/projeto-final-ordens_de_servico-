@@ -28,7 +28,6 @@
                             <option value="Computadores">Desktops</option>
                             <option value="Impressoras">Impressoras</option>
                         </select>
-                        <input type="text" class="form-control" th:field="*{especialidade}" th:errorclass="is-invalid">
                         <div class="invalid-feedback" th:if="${#fields.hasErrors('especialidade')}" th:errors="*{especialidade}">Erro</div>
                     </div>
                     <div class="col-md-6">

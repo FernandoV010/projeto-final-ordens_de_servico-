@@ -31,9 +31,10 @@ public class Tecnico {
 
     /** Tipo de equipamento que atende. */
     @NotBlank(message = "Campo obrigatório.")
-    @Size(max = 60, message = "Use no máximo 60 caracteres.")
+	@Size(max = 60, message = "Use no máximo 60 caracteres.")
     @Column(nullable = false, length = 60)
     private String especialidade;
+
 
     /** Telefone para contato (opcional). */
     @Size(max = 20, message = "Use no máximo 20 caracteres.")
