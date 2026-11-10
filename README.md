@@ -39,7 +39,8 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 | RF02 | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento e Concluída) | 
 | RF03 | O sistema deve permitir o cadastro, edição e exclusão de clientes | 
 | RF04 | O sistema deve permitir o cadastro, edição e exclusão de técnicos | 
-| RF04 | O sistema permite a busca de endereços por uma API de CEP |
+| RF05 | O sistema permite a busca pelo nome do técnico |
+| RF06 | O sistema permite a busca de endereços por uma API de CEP |
 
 ### 2.2 Requisitos não funcionais (COMO o sistema deve ser)
 
