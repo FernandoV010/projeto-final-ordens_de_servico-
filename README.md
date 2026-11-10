@@ -19,7 +19,7 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 | Bloco | Resposta |
 |---|---|
-| **Usuários** | Técnico de Informática e Gestor|
+| **Usuários** | Técnico de Informática e Administrador|
 | **Problema** | Demora no preenchimento de dados em planilhas | 
 | **Proposta de valor** | Agilidade no atendimento, facilidade no preenchimento das informações e na busca por informações | 
 | **Funcionalidades principais** | Centralizar, organizar e automatizar informações no Banco de Dados para uma prestação de serviço ou manutenção |
@@ -35,10 +35,11 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 | ID | Requisito | 
 |---|---|
-| RF01 | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, data/hora | 
+| RF01 | O sistema deve permitir a abertura de uma nova Ordem de Serviço, registrando dados do cliente, descrição do problema, tipo de equipamento com suas informações básicas, diagnóstico e  data | 
 | RF02 | O sistema deve permitir a alteração do status da OS (ex: Aberta, Em Andamento e Concluída) | 
-| RF03 | O sistema deve permitir o cancelamento de uma OS mediante a inserção obrigatória de uma justificativa | 
-| RF04 | O sistema deve permitir o cadastro, edição e exclusão de clientes | 
+| RF03 | O sistema deve permitir o cadastro, edição e exclusão de clientes | 
+| RF04 | O sistema deve permitir o cadastro, edição e exclusão de técnicos | 
+| RF04 | O sistema permite a busca de endereços por uma API de CEP |
 
 ### 2.2 Requisitos não funcionais (COMO o sistema deve ser)
 
@@ -46,7 +47,9 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 |---|---|
 | RNF01 | O sistema deve exigir login e senha |
 | RNF02 | O sistema deve restringir o acesso a dados financeiros e configurações apenas a administradores |
-| RNF03 | O sistema deve permitir a exclusão definitiva ou o anonimato de dados pessoais de clientes quando solicitado, atendendo à Lei Geral de Proteção de Dados |
+| RNF03 | A busca de endereços via API deve retornar o resultado em menos de 2 segundos |
+
+
 
 ### 2.3 Regras de negócio (as REGRAS do negócio que o sistema precisa respeitar)
 
@@ -59,19 +62,19 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 
 ## 3. Histórias de usuário
 
-**HU01 —** Como técnico de informática, quero visualizar uma lista de ordens de serviço ordenadas por prioridade e status, para que eu saiba exatamente qual aparelho devo consertar primeiro.
+**HU01 —** Como técnico de informática, quero visualizar uma lista de ordens de serviço ordenadas por prioridade e status, para que eu saiba exatamente quem está responsável por cada equipamento.
 
 Critério de aceite: O sistema deve exibir uma tela de painel (dashboard) com as OS categorizadas em "Aberta", "Em Andamento" e "Concluída".
 
-Critério de aceite: O técnico deve conseguir filtrar as ordens de serviço pelo seu próprio nome.
+Critério de aceite: O técnico deve conseguir filtrar as ordens de serviço conforme as situações.
 
 **HU02 —** Como técnico de informática, quero atualizar o status da ordem de serviço, para que os outros técnicos saibam que o equipamento está pronto e possa entrar em contato com o cliente.
 
-Critério de aceite: O sistema deve disponibilizar um campo de texto obrigatório para a descrição detalhada do defeito constatado e da solução proposta.
+Critério de aceite: O sistema deve disponibilizar um campo de texto para a descrição detalhada do defeito constatado e da solução proposta.
 
-Critério de aceite: Ao salvar, a OS deve registrar a data, o horário e o nome do técnico que realizou a atualização.
+Critério de aceite: Ao salvar, a OS deve registrar a data e o nome do técnico responsável.
 
-**HU03 —** Como gestor da assistência, quero visualizar o custo total das peças adquiridas para o conserto do equipamento, o valor da mão de obra do serviço, para que eu possa aprovar os orçamentos financeiramente viáveis antes de enviar ao cliente.
+**HU03 —** Como administrador da assistência, quero visualizar a soma das ordens concluídas.
 
 Critério de aceite: O sistema deve exibir em uma aba financeira da OS o detalhamento do preço de custo de cada peça utilizada versus o preço de venda cobrado do cliente.
 
