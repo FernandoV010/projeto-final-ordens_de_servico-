@@ -47,7 +47,7 @@ Na assistência os técnicos se perdiam em meio a pilhas de equipamentos sem sab
 | ID | Requisito |
 |---|---|
 | RNF01 | O sistema deve exigir login e senha |
-| RNF02 | O sistema deve restringir o acesso a dados financeiros e configurações apenas a administradores |
+| RNF02 | O sistema deve restringir o acesso a dados financeiros e algumas configurações apenas a administradores |
 | RNF03 | A busca de endereços via API deve retornar o resultado em menos de 2 segundos |
 
 
