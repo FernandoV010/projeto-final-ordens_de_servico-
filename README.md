@@ -149,6 +149,19 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 
 ### Telas
 
+**Tela de login**
+
+![alt text](image-10.png)
+
+**Login Administrador**
+
+![alt text](image-13.png)
+![alt text](image-14.png)
+![alt text](image-15.png)
+
+**Login Operador**
+
+
 **Painel com os indicadores do atendimento**
 
 ![alt text](image-1.png)
@@ -163,9 +176,17 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 
 ![alt text](image-11.png)
 
-**Tela de login**
+**Regra de negócio: administrador não poderá alterar nem excluir uma ordem de serviço concluída**
 
-![alt text](image-10.png)
+![alt text](image-12.png)
+
+**Painel com pesquisa de CEP**
+
+![alt text](image-16.png)
+
+**Informações sobre o sistema**
+
+![alt text](image-17.png)
 
 ## 10. Checklist do nível essencial
 
@@ -181,12 +202,3 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 - [x] README com a visão do projeto, como executar, usuários de teste, funcionalidades e telas
 - [x] Quadro Kanban atualizado
 
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-9.png)
