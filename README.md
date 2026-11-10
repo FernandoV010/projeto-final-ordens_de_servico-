@@ -145,12 +145,16 @@ Abra o projeto na IDE e execute a classe `SistemaApplication`. Acesse `http://lo
 Java 21 · Spring Boot 4 · Spring MVC · Thymeleaf · Bootstrap 5 · Spring Data JPA · H2 (desenvolvimento) · MySQL (produção) · Spring Security · Git/GitHub
 
 ## 7. Uso de inteligência artificial
-<!-- Registre aqui, de forma resumida, quando e como você usou ferramentas de IA de forma relevante no projeto. -->
+Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcionais e não funcionais.
 
 ## 8. Histórico de versões
 | Versão | Data | Descrição |
 |---|---|---|
 | 0.1.0 | | Projeto inicial criado a partir do repositório modelo |
+
+## 9. Telas
+![alt text](image.png)
+
 
 ## Usuários de teste
 
