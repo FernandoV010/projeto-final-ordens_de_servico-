@@ -118,43 +118,69 @@ classDiagram
 
 ---
 
-## 5. Como executar
-
-### No GitHub Codespaces (recomendado)
-1. No repositório, clique em **Code → Codespaces → Create codespace on main** (ou abra o Codespace existente).
-2. Aguarde a preparação do ambiente.
-3. No terminal, execute:
-   ```bash
-   mvn spring-boot:run
-   ```
-4. Quando aparecer o aviso da porta **8080**, clique em **Abrir no navegador**.
-
-### No computador (ferramentas instaladas)
-Requisitos: JDK 21 e uma IDE (IntelliJ IDEA ou VS Code com o *Extension Pack for Java*).
-Abra o projeto na IDE e execute a classe `SistemaApplication`. Acesse `http://localhost:8080`.
-
-### Acesso
-| Usuário | Senha | Perfil |
-|---|---|---|
-| admin | admin123 | Administrador |
-| operador | operador123 | Operador |
-| viana | viana020891 | Operador |
-
----
-
-## 6. Tecnologias
+## 5. Tecnologias
 Java 21 · Spring Boot 4 · Spring MVC · Thymeleaf · Bootstrap 5 · Spring Data JPA · H2 (desenvolvimento) · MySQL (produção) · Spring Security · Git/GitHub
 
-## 7. Uso de inteligência artificial
+## 6. Uso de inteligência artificial
 Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcionais e não funcionais.
 
-## 8. Histórico de versões
+## 7. Histórico de versões
 | Versão | Data | Descrição |
 |---|---|---|
 | 0.1.0 | | Projeto inicial criado a partir do repositório modelo |
 
-## 9. Telas
+## 8.Usuários de teste
+
+| Usuário | Senha | Perfil | O que pode fazer |
+|---|---|---|---|
+| admin | admin123 | Administrador | Tudo |
+| operador | operador123 | Operador | Consulta clientes e técnicos, abre ordens de serviço e muda a situação delas |
+| viana | viana020891 | Operador | Consulta clientes e técnicos, abre ordens de serviço e muda a situação delas |
+
+## 9. Funcionalidades e telas
+
+- Cadastro de clientes e técnicos.
+- Abertura e acompanhamento das ordens de serviço.
+- Situação de cada ordem: aberta, em andamento ou concluída.
+- Painel com os indicadores do atendimento.
+- Login com dois perfis: o Administrador pode tudo; o Operador consulta clientes e técnicos, abre ordens de serviço e muda a situação delas.
+- Painel com pesquisa de CEP.
+- Informações sobre o sistema.
+
+### Telas
+
+**Painel com os indicadores do atendimento**
+
+![alt text](image-1.png)
+![alt text](image-7.png)
+
+**Ordens de serviço e suas situações**
+
+![alt text](image-4.png)
+![alt text](image-9.png)
+
+**Regra de negócio: concluir sem diagnóstico e valor**
+
+![alt text](image-11.png)
+
+**Tela de login**
+
 ![alt text](image-10.png)
+
+## 10. Checklist do nível essencial
+
+- [x] O sistema sobe sem erros seguindo a seção 5 (Como executar)
+- [x] Cadastro completo de clientes (cadastrar, listar, editar e excluir), com validação
+- [x] Cadastro completo de técnicos, com validação
+- [x] Ordens de serviço ligadas a clientes e técnicos, com lista de escolha no formulário
+- [x] Regra de negócio 1: Não concluir uma ordem de serviço sem diagnóstico e valor.
+- [x] Regra de negócio 2: Não alterar nem excluir uma ordem de serviço concluída.
+- [x] Login com 2 perfis (admin e operador), senhas criptografadas e acesso conforme o perfil
+- [x] Painel com os indicadores na página inicial
+- [x] Repositório no GitHub com commits frequentes
+- [x] README com a visão do projeto, como executar, usuários de teste, funcionalidades e telas
+- [x] Quadro Kanban atualizado
+
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
@@ -164,12 +190,3 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 ![alt text](image-7.png)
 ![alt text](image-8.png)
 ![alt text](image-9.png)
-
-
-## Usuários de teste
-
-| Usuário | Senha | Perfil | O que pode fazer |
-|---|---|---|---|
-| admin | admin123 | Administrador | Tudo |
-| operador | operador123 | Operador | Consulta clientes e técnicos, abre ordens de serviço e muda a situação delas |
-| viana | viana020891 | Operador | Consulta clientes e técnicos, abre ordens de serviço e muda a situação delas |
