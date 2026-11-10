@@ -161,6 +161,8 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 
 **Login Operador**
 
+![alt text](image-18.png)
+![alt text](image-19.png)
 
 **Painel com os indicadores do atendimento**
 
