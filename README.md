@@ -74,11 +74,11 @@ Critério de aceite: O sistema deve disponibilizar um campo de texto para a desc
 
 Critério de aceite: Ao salvar, a OS deve registrar a data e o nome do técnico responsável.
 
-**HU03 —** Como administrador da assistência, quero visualizar a soma das ordens concluídas.
+**HU03 —** Como administrador da assistência, quero visualizar o faturamento das ordens concluídas.
 
-Critério de aceite: O sistema deve exibir em uma aba financeira da OS o detalhamento do preço de custo de cada peça utilizada versus o preço de venda cobrado do cliente.
+Critério de aceite: O sistema deve exibir na aba Ordem de Serviço o valor de cada OS.
 
-Critério de aceite: O sistema deve calcular e exibir em destaque o lucro líquido daquela ordem de serviço.
+Critério de aceite: O sistema deve pemitir imprimir um comprovante da Ordem de Serviço com informações e campos de assinatura.
 
 ---
 
