@@ -154,6 +154,7 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 
 ## 9. Telas
 ![alt text](image.png)
+![alt text](image-1.png)
 
 
 ## Usuários de teste
