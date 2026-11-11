@@ -1,8 +1,8 @@
 /* Estilos do projeto. A base visual vem do Bootstrap 5; aqui ficam só os ajustes. */
 
 :root {
-    --cor-principal: #6A1B9A;   /* troque pela cor do seu sistema */
-    --cor-principal-escura: #4A148C;   /* um tom mais escuro (botões ao passar o mouse) */
+    --cor-principal: #7e7c7f;   /* troque pela cor do seu sistema */
+    --cor-principal-escura: #e4ae31;   /* um tom mais escuro (botões ao passar o mouse) */
 }
 
 body {
@@ -45,4 +45,14 @@ main { flex: 1; }
 @media print {
     .navbar, footer { display: none !important; }
     .card { border: 0; }
+}
+
+/* Altera a cor dos nomes/links do menu para laranja */
+.navbar .nav-link, .navbar-brand {
+    color: #ff9900 !important; 
+}
+
+/* Cor dos nomes quando o mouse passa por cima */
+.navbar .nav-link:hover {
+    color: #ffb733 !important; /* Um laranja mais claro para o efeito ao passar o mouse */
 }

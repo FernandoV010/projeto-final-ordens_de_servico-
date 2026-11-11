@@ -61,21 +61,41 @@ public class DadosIniciais implements CommandLineRunner {
             Cliente cliente1 = new Cliente("Marina Costa", "(43) 99999-1001", "marina@email.com", "Londrina", LocalDate.of(2026, 8, 12));
             Cliente cliente2 = new Cliente("Oficina Silva Ltda.", "(43) 3333-2002", "contato@oficinasilva.com", "Cambé", LocalDate.of(2026, 9, 3));
             Cliente cliente3 = new Cliente("Pedro Henrique Alves", "(43) 98888-3003", "pedro@email.com", "Ibiporã", LocalDate.of(2026, 10, 1));
+            Cliente cliente4 = new Cliente("Sueli Anjos", "(43) 98888-1234", "sueli@email.com", "Londrina", LocalDate.of(2026, 8, 12));
+            Cliente cliente5 = new Cliente("Giovanna Oliveira", "(43) 97524-2069", "gigiroca@gmail.com", "Arapongas", LocalDate.of(2026, 9, 3));
+            Cliente cliente6 = new Cliente("Maria Rosene Gomes", "(17) 98507-2853", "mrg@email.com", "Londrina", LocalDate.of(2026, 10, 1));
+            Cliente cliente7 = new Cliente("Valdir Costa", "(43) 99854-2024", "val@email.com", "Londrina", LocalDate.of(2026, 8, 12));
+            Cliente cliente8 = new Cliente("Ivan Lucas", "(11) 98741-1991", "ivanls@gmail.com", "maringá", LocalDate.of(2026, 9, 3));
+            Cliente cliente9 = new Cliente("Diogo Tchoko", "(43) 96589-3082", "diogo@email.com", "Londrina", LocalDate.of(2026, 10, 1));
             cliente1.setBairro("Centro");
             cliente2.setBairro("Jardim Europa");
             cliente3.setBairro("Vila Nova");
+            cliente4.setBairro("Jardim Guararapes");
+            cliente5.setBairro("Jardim Aeroporto");
+            cliente6.setBairro("Vila Bonifacio");
+            cliente7.setBairro("Centro");
+            cliente8.setBairro("Jardim Nelia");
+            cliente9.setBairro("Antares");
             clienteRepository.save(cliente1);
             clienteRepository.save(cliente2);
             clienteRepository.save(cliente3);
+            clienteRepository.save(cliente4);
+            clienteRepository.save(cliente5);
+            clienteRepository.save(cliente6);
+            clienteRepository.save(cliente7);
+            clienteRepository.save(cliente8);
+            clienteRepository.save(cliente9);
         }
 
         if (tecnicoRepository.count() == 0) {
             Tecnico tecnico1 = new Tecnico("Carlos Mendes", "Notebooks", "(43) 99111-2233");
             Tecnico tecnico2 = new Tecnico("Juliana Prado", "Impressoras", "(43) 99222-3344");
             Tecnico tecnico3 = new Tecnico("Rafael Souza", "Desktops", "(43) 99333-4455");
+            Tecnico tecnico4 = new Tecnico("Cristiane Viana", "Notebooks", "(43) 99444-5566");
             tecnicoRepository.save(tecnico1);
             tecnicoRepository.save(tecnico2);
             tecnicoRepository.save(tecnico3);
+            tecnicoRepository.save(tecnico4);
         }
 
         // Operação principal: cada registro aponta para registros que já existem (relacionamento).
@@ -94,9 +114,14 @@ public class DadosIniciais implements CommandLineRunner {
                         clientes.get(2 % clientes.size()), tecnicos.get(2 % tecnicos.size()));
                 ordemServico3.setDiagnostico("Troca do display");
                 ordemServico3.setValor(new BigDecimal("450.00"));
+                OrdemServico ordemServico4 = new OrdemServico("Notebook Lenovo Ideapad", "Tela com manchas", LocalDate.of(2026, 10, 17), StatusOrdem.ABERTA,
+                        clientes.get(3 % clientes.size()), tecnicos.get(3 % tecnicos.size()));
+                ordemServico4.setDiagnostico("Troca da tela");
+                ordemServico4.setValor(new BigDecimal("600.00"));
                 ordemServicoRepository.save(ordemServico1);
                 ordemServicoRepository.save(ordemServico2);
                 ordemServicoRepository.save(ordemServico3);
+                ordemServicoRepository.save(ordemServico4);
             }
         }
     }
