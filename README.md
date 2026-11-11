@@ -122,7 +122,7 @@ classDiagram
 Java 21 · Spring Boot 4 · Spring MVC · Thymeleaf · Bootstrap 5 · Spring Data JPA · H2 · MySQL · Spring Security · Git/GitHub
 
 ## 6. Uso de inteligência artificial
-Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcionais e não funcionais.
+Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcionais e não funcionais. Mudança nas paletas de cores conforme meu logotipo.
 
 ## 7. Histórico de versões
 | Versão | Data | Descrição |
