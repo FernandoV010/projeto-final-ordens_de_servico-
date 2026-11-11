@@ -115,10 +115,30 @@ classDiagram
     Cliente "1" --> "*" OrdemServico : solicita
     Tecnico "1" --> "*" OrdemServico : atende
 ```
+## 5. Como executar
+
+### No GitHub Codespaces (recomendado)
+1. No repositório, clique em **Code → Codespaces** e abra o Codespace existente (ou **Create codespace on main**).
+2. No terminal, execute:
+   ```bash
+   mvn spring-boot:run
+   ```
+3. Aguarde a mensagem `Started SistemaApplication` no terminal.
+4. Abra a aba **Portas** (ao lado do Terminal) e, na linha da porta **8080**, clique no ícone de globo (**Abrir no navegador**).
+5. Entre com um dos usuários da seção **Usuários de teste**.
+
+### No computador (ferramentas instaladas)
+Requisitos: JDK 21 e Maven (ou uma IDE com suporte a Java, como IntelliJ IDEA ou VS Code com o *Extension Pack for Java*).
+Na pasta do projeto, execute `mvn spring-boot:run` e acesse `http://localhost:8080`.
+
+### Banco de dados de desenvolvimento
+- O banco H2 fica na pasta `dados/` (não vai para o GitHub). Na primeira execução, o sistema cria as tabelas e os dados de exemplo.
+- Para recomeçar com os dados de exemplo: pare o sistema e apague a pasta (`rm -rf dados`).
+- Console do banco: endereço `/h2-console` (só para o perfil ADMIN).
 
 ---
 
-## 5. Tecnologias
+## 5.1 Tecnologias
 Java 21 · Spring Boot 4 · Spring MVC · Thymeleaf · Bootstrap 5 · Spring Data JPA · H2 · MySQL · Spring Security · Git/GitHub
 
 ## 6. Uso de inteligência artificial
