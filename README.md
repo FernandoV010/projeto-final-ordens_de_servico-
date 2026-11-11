@@ -5,7 +5,7 @@
 | **Aluno(a)** | Fernando Antonio Viana de Queiroz Junior |
 | **Turma** | TEC-N-001788/2026 |
 | **Opção escolhida** | Ordens de Serviço |
-| **Versão atual** | 0.1.0 |
+| **Versão atual** | 1.0.0 |
 
 ---
 
@@ -148,6 +148,7 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 | Versão | Data | Descrição |
 |---|---|---|
 | 0.1.0 | | Projeto inicial criado a partir do repositório modelo |
+| 1.0.0 | 11/11/2026 | Primeira versão estável |
 
 ## 8.Usuários de teste
 
