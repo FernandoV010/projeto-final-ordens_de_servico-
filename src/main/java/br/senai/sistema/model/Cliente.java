@@ -42,10 +42,11 @@ public class Cliente {
     @Column(nullable = false, length = 20)
     private String telefone;
 
-    /** E-mail (opcional). */
+    /** E-mail. */
+    @NotBlank(message = "Campo obrigatório.")
     @Size(max = 100, message = "Use no máximo 100 caracteres.")
     @Email(message = "Informe um e-mail válido.")
-    @Column(length = 100)
+    @Column(nullable = false, length = 100)
     private String email;
 
     /** Cidade do cliente. */
