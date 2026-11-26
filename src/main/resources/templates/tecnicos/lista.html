@@ -9,7 +9,9 @@
         <h1 class="h4 mb-0">Técnicos
             <span class="badge text-bg-secondary align-middle" th:text="${#lists.size(tecnicos)} + ' registro(s)'">0 registro(s)</span>
         </h1>
-        <a th:href="@{/tecnicos/novo}" class="btn btn-app"><i class="bi bi-plus-lg"></i> Novo técnico</a>
+        <a th:href="@{/tecnicos/novo}"
+           class="btn btn-app"
+           th:if="${!#authorization.expression('hasRole(''OPERADOR'')')}"><i class="bi bi-plus-lg"></i> Novo técnico</a>
     </div>
 
     <!-- Mensagem de sucesso: fragmento reaproveitado do layout -->
