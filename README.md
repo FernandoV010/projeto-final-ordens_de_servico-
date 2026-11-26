@@ -149,7 +149,7 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 |---|---|---|
 | 0.1.0 | | Projeto inicial criado a partir do repositório modelo |
 | 1.0.0 | 11/11/2026 | Primeira versão estável |
-| 1.1.0 | 25/11/2026 | Manutenção: chamados #2 e 3# resolvidos (veja o CHANGELOG.md) |
+| 1.1.0 | 25/11/2026 | Manutenção: chamados #10 e #11 resolvidos (veja o CHANGELOG.md) |
 
 ## 8.Usuários de teste
 

@@ -7,11 +7,11 @@ Versões no formato MAIOR.MENOR.CORREÇÃO (versionamento semântico).
 ### Corrigido
 - 
 ### Melhorado
-- fix: E-mail agora está obrigatório para cadastro de cliente (fixes #2)
-- fix: Melhoria - Agora no login operador não aparece o botão "Novo técnico" (fixes #3)
+- E-mail obrigatório #10
+- Retirar o campo "Novo técnico" do login operador #11
 
 ### Planejado para a próxima versão
-- Cliente com nome peculiar #1
+- Cliente com nome peculiar #9
 
 ## [1.0.0] - 11/11/2026
 - Primeira versão estável: nível essencial completo.
