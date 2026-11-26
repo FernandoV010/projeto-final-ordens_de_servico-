@@ -5,7 +5,7 @@
 | **Aluno(a)** | Fernando Antonio Viana de Queiroz Junior |
 | **Turma** | TEC-N-001788/2026 |
 | **Opção escolhida** | Ordens de Serviço |
-| **Versão atual** | 1.0.0 |
+| **Versão atual** | 1.1.0 |
 
 ---
 
@@ -149,6 +149,7 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 |---|---|---|
 | 0.1.0 | | Projeto inicial criado a partir do repositório modelo |
 | 1.0.0 | 11/11/2026 | Primeira versão estável |
+| 1.1.0 | 25/11/2026 | Manutenção: chamados #2 e 3# resolvidos (veja o CHANGELOG.md) |
 
 ## 8.Usuários de teste
 
@@ -225,3 +226,14 @@ Utilizei o GEMINI para alterações de códigos conforme meus requisitos funcion
 - [x] README com a visão do projeto, como executar, usuários de teste, funcionalidades e telas
 - [x] Quadro Kanban atualizado
 
+## 11. Indicadores de suporte (versão 1.1.0)
+
+| Indicador | Valor |
+|---|---|
+| Chamados registrados | 3 |
+| Chamados resolvidos | 2 |
+| Taxa de resolução | 66,67% |
+| Tempo médio de resolução | 5 dias |
+| Chamados por tipo | 2 perfectivas, 1 preventiva |
+
+**O que vou fazer diferente na próxima versão:** Fazer vários testes com os logins de Admin e Operador.
